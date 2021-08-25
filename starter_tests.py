@@ -1,9 +1,7 @@
 """
 ===== Module Description =====
 
-This module contains sample test cases to test the code.
-These are a very incomplete set of test cases! We will be testing your code on
-a much more thorough set of tests.
+This module contains test cases to test the code.
 """
 
 import pytest
