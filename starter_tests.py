@@ -266,4 +266,4 @@ class TestExperiment:
 
 
 if __name__ == '__main__':
-    pytest.main(['a1_starter_tests.py'])
+    pytest.main(['starter_tests.py'])
