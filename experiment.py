@@ -1,20 +1,4 @@
-"""Assignment 1 - Running experiments (Task 5)
-
-CSC148, Winter 2021
-
-This code is provided solely for the personal and private use of
-students taking the CSC148 course at the University of Toronto.
-Copying for purposes other than this use is expressly prohibited.
-All forms of distribution of this code, whether as given or with
-any changes, are expressly prohibited.
-
-Authors: Diane Horton, Ian Berlott-Atwell, Jonathan Calver,
-Sophia Huynh, Myriam Majedi, and Jaisie Sin.
-
-All of the files in this directory and all subdirectories are:
-Copyright (c) 2021 Diane Horton, Ian Berlott-Atwell, Jonathan Calver,
-Sophia Huynh, Myriam Majedi, and Jaisie Sin.
-
+"""
 ===== Module Description =====
 
 This module contains class SchedulingExperiment.  It can create an experiment
@@ -82,9 +66,6 @@ class SchedulingExperiment:
     def __init__(self, config: Dict[str, Union[str, bool]]) -> None:
         """Initialize a new experiment with the configuration specified in
         <config>.
-
-        Precondition: <config> contains keys and values as specified
-        in Assignment 1.
         """
         self.verbose = config['verbose']
         if config['algorithm'] == 'random':
@@ -103,8 +84,7 @@ class SchedulingExperiment:
     def run(self, report: bool = False) -> Dict[str, Union[int, float]]:
         """Run the experiment and return statistics on the outcome.
 
-        The return value is a dictionary with keys and values are as specified
-        in Step 6 of Assignment 1.
+        The return value is a dictionary with keys and values.
 
         If <report> is True, print a report on the statistics from this
         experiment.  Either way, return the statistics in a dictionary.
@@ -123,8 +103,7 @@ class SchedulingExperiment:
 
     def _compute_stats(self) -> None:
         """Compute the statistics for this experiment, and store in
-        <self>.stats. Keys and values are as specified in Step 6 of
-        Assignment 1.
+        <self>.stats.
 
         Precondition: _run has already been called.
         """
@@ -141,9 +120,7 @@ class SchedulingExperiment:
     def _print_report(self) -> None:
         """Report on the statistics for this experiment.
 
-        This method is *only* for debugging purposes for your benefit, so
-        the content and format of the report is your choice; we
-        will not call your run method with <report> set to True.
+        This method is *only* for debugging purposes.
 
         Precondition: _compute_stats has already been called.
         """
@@ -161,8 +138,7 @@ class SchedulingExperiment:
 def read_parcels(parcel_file: str) -> List[Parcel]:
     """Read parcel data from <parcel_file> and return.
 
-    Precondition: <parcel_file> is the path to a file containing parcel data in
-                  the form specified in Assignment 1.
+    Precondition: <parcel_file> is the path to a file containing parcel data.
     """
     parcels = []
     # read and add the parcels to the list.
@@ -184,7 +160,7 @@ def read_distance_map(distance_map_file: str) -> DistanceMap:
     that records it.
 
     Precondition: <distance_map_file> is the path to a file containing distance
-                  data in the form specified in Assignment 1.
+                  data.
     """
     d = DistanceMap()
     with open(distance_map_file, 'r') as file:
@@ -204,8 +180,7 @@ def read_trucks(truck_file: str, depot_location: str) -> Fleet:
     """Read truck data from <truck_file> and return a Fleet containing these
     trucks, with each truck starting at the <depot_location>.
 
-    Precondition: <truck_file> is a path to a file containing truck data in the
-                  form specified in Assignment 1.
+    Precondition: <truck_file> is a path to a file containing truck data.
     """
     f = Fleet()
     with open(truck_file, 'r') as file:
@@ -224,7 +199,7 @@ def simple_check(config_file: str) -> None:
     defined in <config_file>.
 
     Precondition: <config_file> is a json file with keys and values
-    as in the dictionary format defined in Assignment 1.
+    in the dictionary format.
     """
     # Read an experiment configuration from a file and build a dictionary
     # from it.
@@ -248,7 +223,7 @@ if __name__ == '__main__':
     })
 
     # ------------------------------------------------------------------------
-    # The following code can be used as a quick and simple check to see if your
+    # The following code can be used as a quick and simple check to see if the
     # experiment can run without errors.
     # ------------------------------------------------------------------------
     simple_check('data/demo.json')

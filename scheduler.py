@@ -1,26 +1,11 @@
-"""Assignment 1 - Scheduling algorithms (Task 4)
-
-CSC148, Winter 2021
-
-This code is provided solely for the personal and private use of
-students taking the CSC148 course at the University of Toronto.
-Copying for purposes other than this use is expressly prohibited.
-All forms of distribution of this code, whether as given or with
-any changes, are expressly prohibited.
-
-Authors: Diane Horton, Ian Berlott-Atwell, Jonathan Calver,
-Sophia Huynh, Myriam Majedi, and Jaisie Sin.
-
-All of the files in this directory and all subdirectories are:
-Copyright (c) 2021 Diane Horton, Ian Berlott-Atwell, Jonathan Calver,
-Sophia Huynh, Myriam Majedi, and Jaisie Sin.
-
+"""
 ===== Module Description =====
 
 This module contains the abstract Scheduler class, as well as the two
 subclasses RandomScheduler and GreedyScheduler, which implement the two
 scheduling algorithms described in the handout.
 """
+
 from typing import List, Dict, Union, Callable
 from random import choice
 from container import PriorityQueue
@@ -49,10 +34,7 @@ class Scheduler:
         truck, due to lack of capacity.
 
         If <verbose> is True, print step-by-step details regarding
-        the scheduling algorithm as it runs.  This is *only* for debugging
-        purposes for your benefit, so the content and format of this
-        information is your choice; we will not test your code with <verbose>
-        set to True.
+        the scheduling algorithm as it runs.
         """
         raise NotImplementedError
 

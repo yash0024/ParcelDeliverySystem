@@ -1,20 +1,4 @@
-"""Assignment 1 - Domain classes (Task 2)
-
-CSC148, Winter 2021
-
-This code is provided solely for the personal and private use of
-students taking the CSC148 course at the University of Toronto.
-Copying for purposes other than this use is expressly prohibited.
-All forms of distribution of this code, whether as given or with
-any changes, are expressly prohibited.
-
-Authors: Diane Horton, Ian Berlott-Atwell, Jonathan Calver,
-Sophia Huynh, Myriam Majedi, and Jaisie Sin.
-
-All of the files in this directory and all subdirectories are:
-Copyright (c) 2021 Diane Horton, Ian Berlott-Atwell, Jonathan Calver,
-Sophia Huynh, Myriam Majedi, and Jaisie Sin.
-
+"""
 ===== Module Description =====
 
 This module contains the classes required to represent the entities
@@ -300,8 +284,7 @@ class Fleet:
         """
         self.trucks.append(truck)
 
-    # We will not test the format of the string that you return -- it is up
-    # to you.
+
     def __str__(self) -> str:
         """Produce a string representation of this fleet
         >>> p1 = Parcel(123, 20, 'Toronto', 'Hamilton')

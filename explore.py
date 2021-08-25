@@ -1,20 +1,4 @@
-"""Assignment 1 - Compare all algorithms on a single problem (No tasks)
-
-CSC148, Winter 2021
-
-This code is provided solely for the personal and private use of
-students taking the CSC148 course at the University of Toronto.
-Copying for purposes other than this use is expressly prohibited.
-All forms of distribution of this code, whether as given or with
-any changes, are expressly prohibited.
-
-Authors: Diane Horton, Ian Berlott-Atwell, Jonathan Calver,
-Sophia Huynh, Myriam Majedi, and Jaisie Sin.
-
-All of the files in this directory and all subdirectories are:
-Copyright (c) 2021 Diane Horton, Ian Berlott-Atwell, Jonathan Calver,
-Sophia Huynh, Myriam Majedi, and Jaisie Sin.
-
+"""
 ===== Module Description =====
 
 This module reads from a json file (whose name is hard-coded in the
@@ -66,7 +50,7 @@ def compare_algorithms(config_file: str) -> None:
     algorithm on the scheduling problem defined in <config_file>.
 
     Precondition: <config_file> a path to a json file with keys and values
-    as in the dictionary format defined in Assignment 1.
+    in the dictionary format.
     """
     with open(config_file, 'r') as file:
         basic_config = json.load(file)
